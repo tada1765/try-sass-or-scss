@@ -1,0 +1,29 @@
+// just like function:
+@mixin flexFunction($direction, $background) {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+    background: $background
+}
+
+header {
+    // background: lightblue;
+    @include flexFunction(column, lightblue);
+    color: $textColor;
+    button {
+        background: $primaryBtn;
+        &:hover {
+            background: red;
+        }
+        &::after {
+            content: "ELLO.........";
+        }
+    }
+}
+
+// similar to above:
+// header button {
+//     background: $primaryBtn;
+// }

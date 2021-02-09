@@ -1,0 +1,13 @@
+
+@import "./variables"; // NOTE: '_' for import .scss file.
+@import "./header";
+
+.contact button {
+    background: $primaryBtn;
+}
+
+.contact {
+    @extend header;
+    @include flexFunction(row, lightcoral);
+    width: 100% - 20%;
+}
